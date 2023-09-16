@@ -23,11 +23,6 @@ cd python_techdegree_project_5
 
 2. **Create a Virtual Environment (Optional but Recommended):**
 
-```bash
-python -m venv venv
-source venv/bin/activate # On Windows, use: venv\Scripts\activate
-```
-
 3. **Install Dependencies:**
 
 ```bash
