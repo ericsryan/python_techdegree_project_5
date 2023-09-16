@@ -21,7 +21,7 @@ git clone https://github.com/ericsryan/python_techdegree_project_5.git
 cd python_techdegree_project_5
 ```
 
-2. **Create a Virtual Environment (Optional but Recommended):**
+2. **Create a Virtual Environment (Optional but Recommended)**
 
 3. **Install Dependencies:**
 
