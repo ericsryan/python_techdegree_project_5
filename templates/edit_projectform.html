@@ -10,7 +10,7 @@
         <form action="{{ url_for('edit_project', id=project.id) }}" method="POST">
             <label for="title">Project Title</label>
             <input type="text" name="title" id="title" placeholder="Project Name" value="{{ project.title }}" required>
-            <label for="date">Completion Date</label>
+            <label for="date">Completion Date (MM/DD/YYYY)</label>
             <input type="month" name="date" id="date" value="{{ project.date|format_date }}" required>
             <label for="description">Description</label>
             <textarea name="description" id="description" cols="30" rows="20" placeholder="Description" required>{{ project.description }}</textarea>
