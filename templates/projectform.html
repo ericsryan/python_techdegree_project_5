@@ -10,8 +10,8 @@
         <form action="{{ url_for('create_project') }}" method="POST">
             <label for="title">Project Title</label>
             <input type="text" name="title" id="title" placeholder="Project Name" required>
-            <label for="date">Completion Date (MM/DD/YYYY)</label>
-            <input type="month" name="date" id="date" required>
+            <label for="date">Completion Date</label>
+            <input type="date" name="date" id="date" required>
             <label for="description">Description</label>
             <textarea name="description" id="description" cols="30" rows="20" placeholder="Description" required></textarea>
             <label for="skills-list" id="skills-label">Skills</label>

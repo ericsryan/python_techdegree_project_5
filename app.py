@@ -21,7 +21,7 @@ def create_project():
         print("Form logic")
         new_project = Project(
             title = request.form['title'],
-            date = datetime.datetime.strptime(request.form['date'], "%m/%d/%Y").date(),
+            date = datetime.datetime.strptime(request.form['date'], "%Y-%m-%d").date(),
             description = request.form['description'],
             skills = request.form['skills'],
             repo_link = request.form['github']
@@ -44,12 +44,12 @@ def edit_project(id):
     project = Project.query.get_or_404(id)
     if request.method == 'POST':
         project.title = request.form['title']
-        project.date = datetime.datetime.strptime(request.form['date'], "%m/%d/%Y").date()
+        project.date = datetime.datetime.strptime(request.form['date'], "%Y-%m-%d").date()
         project.description = request.form['description']
         project.skills = request.form['skills']
         project.repo_link = request.form['github']
         db.session.commit()
-        return redirect(url_for('index'))
+        return redirect(url_for('view_project', id=project.id))
     return render_template('edit_projectform.html', project=project)
 
 
